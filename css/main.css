@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1e1e1e;
+}
+
+.name {
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Heebo', sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 1;
+}
+
+/* .desc {
+    color: white;
+    font-size: 1.5rem;
+} */
+
+.link-text {
+    font-size: 1rem;
+}
+
+.content-container {
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    pointer-events: none;
+}
+
+.link-container {
+    display: inline;
+    pointer-events: all;
+    position: relative;
+}
+
+.link-container>a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 0;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.link-container>a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 5px;
+    background: white;
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.link-container>a:hover:before {
+    left: 0;
+    right: 0;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    pointer-events: all;
+}
+
+.avatar:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.cd-headline {
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.cd-intro {
+    margin: 1em auto;
+}
+
+.cd-words-wrapper {
+    width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .name {
+        font-size: 5rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .avatar {
+        width: 250px;
+        height: 250px;
+    }
+    .cd-headline {
+        font-size: 3rem;
+    }
+    .link-text {
+        font-size: 1.4rem;
+    }
+    .cd-words-wrapper {
+        width: 165px;
+    }
+    .link-container>a {
+        padding: 10px 10px;
+    }
+    .link-container>a:before {
+        height: 2px;
+    }
+    .link-container>a:hover:before {
+        left: 10px;
+        right: 10px;
+    }
+    
+}
