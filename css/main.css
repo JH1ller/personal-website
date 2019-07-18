@@ -14,12 +14,8 @@ body {
     font-family: 'Heebo', sans-serif;
     letter-spacing: 0.1rem;
     line-height: 1;
+    text-transform: uppercase;
 }
-
-/* .desc {
-    color: white;
-    font-size: 1.5rem;
-} */
 
 .link-text {
     font-size: 1rem;
